@@ -1,0 +1,7 @@
+{
+  "name": "LexGuard AI",
+  "description": "Intelligent contract risk auditing and document studio for legal and commercial teams",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,11 +1,66 @@
-<div align="center">
+# LexGuard — Интеллектуальный аудит контрактов и генератор соглашений
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Веб-приложение для анализа юридических рисков в договорах, выявления скрытых кабальных условий и генерации сбалансированных соглашений.
 
-  <h1>Built with AI Studio</h2>
+## 🚀 Как запустить проект в VS Code
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### 1. Предварительные требования
+Убедитесь, что на вашем компьютере установлен **Node.js** (версии 18, 20 или 22+):
+- Проверить установку: в терминале выполните `node -v` и `npm -v`.
+- Если Node.js не установлен, скачайте его с официального сайта: [nodejs.org](https://nodejs.org/).
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+---
 
-</div>
+### 2. Открытие в VS Code
+1. Распакуйте скачанный zip-архив в удобную папку (например, `lexguard-project`).
+2. Откройте **Visual Studio Code**.
+3. Нажмите **File -> Open Folder...** (или `Ctrl+K Ctrl+O` / `Cmd+O`) и выберите папку с распакованным проектом.
+
+---
+
+### 3. Установка зависимостей
+Откройте встроенный терминал в VS Code (сочетание клавиш ``Ctrl + ` `` или меню **Terminal -> New Terminal**) и выполните:
+
+```bash
+npm install
+```
+
+Это загрузит все необходимые библиотеки (`react`, `vite`, `tailwindcss`, `lucide-react`, `motion` и др.).
+
+---
+
+### 4. Запуск локального сервера разработки
+
+После завершения установки введите команду:
+
+```bash
+npm run dev
+```
+
+Терминал покажет ссылку для запуска:
+```
+  VITE v6.2.3  ready in 300 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://...:3000/
+```
+
+Зажмите `Ctrl` (или `Cmd` на Mac) и кликните по ссылке `http://localhost:3000/`, либо откройте её в любом браузере.
+
+---
+
+### 5. Сборка для продакшена (при необходимости)
+
+Чтобы собрать оптимизированный статический билд:
+
+```bash
+npm run build
+```
+Готовые файлы появятся в директории `dist/`.
+
+---
+
+### 💡 Рекомендуемые расширения для VS Code:
+- **Tailwind CSS IntelliSense** — подсказки классов стилей.
+- **ES7+ React/Redux/React-Native snippets** — быстрые сниппеты кода React.
+- **Prettier - Code formatter** — форматирование кода.

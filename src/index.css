@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #090a0f;
+    color: #f3f4f6;
+    overflow-x: hidden;
+  }
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-editorial {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.font-serif-legal {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono-legal {
+  font-family: 'JetBrains Mono', Courier, monospace;
+}
+
+/* Glassmorphism & Aurora Atmosphere inspired by Superhero Cheesecake (The Year of Greta) */
+.greta-glass {
+  background: rgba(14, 17, 23, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.greta-glass-card {
+  background: rgba(16, 20, 28, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.greta-glass-card:hover {
+  background: rgba(22, 28, 38, 0.75);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(78, 222, 163, 0.12);
+}
+
+.greta-glass-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.greta-glass-hover:hover {
+  background: rgba(22, 28, 38, 0.8);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(78, 222, 163, 0.15);
+}
+
+.greta-card-danger {
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.06) 0%, rgba(14, 17, 23, 0.75) 100%);
+  border-radius: 1rem;
+}
+
+.greta-card-warning {
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(14, 17, 23, 0.75) 100%);
+  border-radius: 1rem;
+}
+
+.greta-card-mint {
+  border: 1px solid rgba(78, 222, 163, 0.25);
+  background: linear-gradient(135deg, rgba(78, 222, 163, 0.06) 0%, rgba(14, 17, 23, 0.75) 100%);
+  border-radius: 1rem;
+}
+
+/* Radar pulse animation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+/* Cinematic Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2433;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e384d;
+}
+
