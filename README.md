@@ -1,66 +1,52 @@
-# LexGuard — Интеллектуальный аудит контрактов и генератор соглашений
+# ⚖️ LexGuard AI
 
-Веб-приложение для анализа юридических рисков в договорах, выявления скрытых кабальных условий и генерации сбалансированных соглашений.
+**Upload a contract, see the risks before you sign.**
 
-## 🚀 Как запустить проект в VS Code
+Most people sign rental, job or service contracts without a lawyer and miss one-sided clauses: hidden penalties, automatic renewals, unlimited liability. LexGuard reads the contract, highlights risky clauses, explains each one in plain language, and helps you generate a fairer agreement.
 
-### 1. Предварительные требования
-Убедитесь, что на вашем компьютере установлен **Node.js** (версии 18, 20 или 22+):
-- Проверить установку: в терминале выполните `node -v` и `npm -v`.
-- Если Node.js не установлен, скачайте его с официального сайта: [nodejs.org](https://nodejs.org/).
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-API-8E75B2?logo=googlegemini&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss&logoColor=white)
 
----
+## Features
 
-### 2. Открытие в VS Code
-1. Распакуйте скачанный zip-архив в удобную папку (например, `lexguard-project`).
-2. Откройте **Visual Studio Code**.
-3. Нажмите **File -> Open Folder...** (или `Ctrl+K Ctrl+O` / `Cmd+O`) и выберите папку с распакованным проектом.
+| Tab | What it does |
+|---|---|
+| 🔍 **Contract Audit** | Finds risky and one-sided clauses, rates each by severity, and opens a detailed card: why it's risky and what to ask for instead |
+| 🧩 **AI Doc Builder** | A 4-step wizard: choose a document type, set the parameters, and get a balanced agreement generated for you |
+| 🗂️ **Audit History** | Archive of past checks with a timeline, exportable as an audit protocol |
+| 📄 **Templates** | Ready-made starting points for common agreements |
 
----
+Also: an animated landing page with a "risk anatomy" showcase, and subtle sound effects in the interface.
 
-### 3. Установка зависимостей
-Откройте встроенный терминал в VS Code (сочетание клавиш ``Ctrl + ` `` или меню **Terminal -> New Terminal**) и выполните:
+## Run it
+
+Requirements: Node.js 18+.
 
 ```bash
 npm install
+cp .env.example .env.local   # set GEMINI_API_KEY
+npm run dev                  # http://localhost:3000
 ```
 
-Это загрузит все необходимые библиотеки (`react`, `vite`, `tailwindcss`, `lucide-react`, `motion` и др.).
+Production build: `npm run build` (output in `dist/`).
+
+## Disclaimer
+
+LexGuard helps you notice problems and ask better questions. It is not legal advice.
 
 ---
 
-### 4. Запуск локального сервера разработки
+<details>
+<summary>🇷🇺 На русском</summary>
 
-После завершения установки введите команду:
+**LexGuard AI** — веб-приложение для анализа юридических рисков в договорах, выявления скрытых кабальных условий и генерации сбалансированных соглашений.
 
-```bash
-npm run dev
-```
+Запуск: установите Node.js 18+, затем `npm install`, укажите `GEMINI_API_KEY` в `.env.local` и выполните `npm run dev`. Приложение откроется на http://localhost:3000.
 
-Терминал покажет ссылку для запуска:
-```
-  VITE v6.2.3  ready in 300 ms
+</details>
 
-  ➜  Local:   http://localhost:3000/
-  ➜  Network: http://...:3000/
-```
+## Author
 
-Зажмите `Ctrl` (или `Cmd` на Mac) и кликните по ссылке `http://localhost:3000/`, либо откройте её в любом браузере.
-
----
-
-### 5. Сборка для продакшена (при необходимости)
-
-Чтобы собрать оптимизированный статический билд:
-
-```bash
-npm run build
-```
-Готовые файлы появятся в директории `dist/`.
-
----
-
-### 💡 Рекомендуемые расширения для VS Code:
-- **Tailwind CSS IntelliSense** — подсказки классов стилей.
-- **ES7+ React/Redux/React-Native snippets** — быстрые сниппеты кода React.
-- **Prettier - Code formatter** — форматирование кода.
+Made by [Arnur](https://github.com/arna0).
