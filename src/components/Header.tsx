@@ -79,22 +79,19 @@ export const Header: React.FC<HeaderProps> = ({
           }}
           className="flex items-center gap-3 text-left group focus:outline-none"
         >
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#4edea3] to-[#2dd4bf] p-0.5 shadow-[0_0_20px_rgba(78,222,163,0.3)] flex items-center justify-center group-hover:scale-105 transition-transform">
-            <div className="w-full h-full bg-[#090a0f] rounded-[10px] flex items-center justify-center text-[#4edea3]">
+          <div className="w-9 h-9 rounded-xl bg-[#d4b06a] p-0.5 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <div className="w-full h-full bg-[#090a0f] rounded-[10px] flex items-center justify-center text-[#d4b06a]">
               <Scale className="w-4 h-4" />
             </div>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-syne text-lg font-extrabold tracking-tight text-white group-hover:text-[#4edea3] transition-colors">
+              <span className="font-syne text-lg font-extrabold tracking-tight text-white group-hover:text-[#d4b06a] transition-colors">
                 LEXGUARD
               </span>
-              <span className="text-[10px] font-mono-legal px-1.5 py-0.5 rounded bg-[#4edea3]/10 text-[#4edea3] border border-[#4edea3]/30 font-bold">
-                AI 4.2
-              </span>
             </div>
-            <p className="text-[10px] text-gray-400 font-mono-legal tracking-wider">
-              LEGAL INTELLIGENCE
+            <p className="text-[11px] text-gray-400">
+              Contract review
             </p>
           </div>
         </button>
@@ -114,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({
           }}
           className={`px-3.5 py-2 rounded-xl text-xs font-mono-legal transition-all duration-200 flex items-center gap-2 ${
             activeViewMode === 'documentary'
-              ? 'bg-white text-black font-bold shadow-[0_0_15px_rgba(255,255,255,0.3)]'
+              ? 'bg-white text-black font-bold'
               : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
           }`}
         >
@@ -138,7 +135,7 @@ export const Header: React.FC<HeaderProps> = ({
               }}
               className={`px-3.5 py-2 rounded-xl text-xs font-mono-legal transition-all duration-200 flex items-center gap-2 relative ${
                 isActive
-                  ? 'bg-[#4edea3] text-black font-bold shadow-[0_0_20px_rgba(78,222,163,0.35)]'
+                  ? 'bg-[#d4b06a] text-black font-bold'
                   : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
               }`}
             >
@@ -149,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
               {tab.badge && (
                 <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold leading-tight ${
                   isActive 
-                    ? 'bg-black text-[#4edea3]' 
+                    ? 'bg-black text-[#d4b06a]' 
                     : 'bg-[#f43f5e]/20 text-[#f43f5e] border border-[#f43f5e]/40'
                 }`}>
                   {tab.badge}
@@ -171,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({
           aria-label={soundEnabled ? 'Mute sound' : 'Enable atmospheric audio'}
         >
           {soundEnabled ? (
-            <Volume2 className="w-4 h-4 text-[#4edea3]" />
+            <Volume2 className="w-4 h-4 text-[#d4b06a]" />
           ) : (
             <VolumeX className="w-4 h-4 text-gray-500" />
           )}
@@ -185,10 +182,10 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={() => {
             soundFx.playSuccess();
           }}
-          className="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono-legal font-bold text-[#4edea3] bg-[#4edea3]/10 hover:bg-[#4edea3]/20 border border-[#4edea3]/30 transition-all"
+          className="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono-legal font-bold text-[#d4b06a] bg-[#d4b06a]/10 hover:bg-[#d4b06a]/20 border border-[#d4b06a]/30 transition-all"
           title="Download complete source code archive (.zip) for VS Code"
         >
-          <Archive className="w-3.5 h-3.5 text-[#4edea3]" />
+          <Archive className="w-3.5 h-3.5 text-[#d4b06a]" />
           <span>ZIP for VS Code</span>
         </a>
 
@@ -202,7 +199,7 @@ export const Header: React.FC<HeaderProps> = ({
           }}
           className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-gray-300 bg-white/[0.04] hover:bg-white/[0.08] hover:text-white border border-white/10 transition-all"
         >
-          <Download className="w-3.5 h-3.5 text-[#4edea3]" />
+          <Download className="w-3.5 h-3.5 text-[#d4b06a]" />
           <span>Export Audit</span>
         </button>
 
@@ -216,7 +213,7 @@ export const Header: React.FC<HeaderProps> = ({
             setActiveTab('analysis');
             onNewScanClick();
           }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] transition-all hover:scale-[1.02] shadow-[0_0_20px_rgba(78,222,163,0.3)]"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all hover:scale-[1.02]"
         >
           <Plus className="w-3.5 h-3.5 text-black" />
           <span>Upload File</span>

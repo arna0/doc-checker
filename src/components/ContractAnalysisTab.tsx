@@ -150,8 +150,8 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
           {/* Preset Selector */}
           <div className="space-y-1.5">
             <div className="flex items-center gap-2 text-[11px] font-mono-legal font-bold text-gray-400 uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-[#4edea3]" />
-              <span>Audit Scenarios (1-click instant switch):</span>
+              <Sparkles className="w-3.5 h-3.5 text-[#d4b06a]" />
+              <span>Example contracts:</span>
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
@@ -169,12 +169,12 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                     }}
                     className={`px-3.5 py-2 rounded-xl text-xs font-mono-legal font-medium transition-all flex items-center gap-2 border ${
                       isActive
-                        ? 'bg-[#4edea3]/15 text-white border-[#4edea3] shadow-[0_0_20px_rgba(78,222,163,0.2)]'
+                        ? 'bg-[#d4b06a]/15 text-white border-[#d4b06a]'
                         : 'bg-white/[0.03] text-gray-400 hover:text-white border-white/10 hover:border-white/20'
                     }`}
                   >
                     <span className={`w-2 h-2 rounded-full ${
-                      isActive ? 'bg-[#4edea3] animate-pulse' : 'bg-gray-500'
+                      isActive ? 'bg-[#d4b06a] animate-pulse' : 'bg-gray-500'
                     }`} />
                     <span className="font-semibold">{preset.title.split('#')[0].split('No.')[0].trim()}</span>
                     <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/40 border border-white/10 text-gray-400">
@@ -193,7 +193,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
               onClick={() => fileInputRef.current?.click()}
               className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-xs font-mono-legal font-medium text-gray-200 border border-white/10 transition-colors"
             >
-              <UploadCloud className="w-3.5 h-3.5 text-[#4edea3]" />
+              <UploadCloud className="w-3.5 h-3.5 text-[#d4b06a]" />
               <span>Upload Contract (.docx, .pdf)</span>
             </button>
             <input 
@@ -225,7 +225,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
               <button
                 type="button"
                 onClick={onExportReport}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#4edea3] to-[#2dd4bf] text-black text-xs font-mono-legal font-bold shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#d4b06a] text-black text-xs font-mono-legal font-bold hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 <Download className="w-3.5 h-3.5 text-black" />
                 <span>Export Audit Protocol</span>
@@ -236,9 +236,9 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
 
         {/* Scan progress bar if scanning */}
         {isScanning && (
-          <div className="p-4 rounded-xl bg-black/60 border border-[#4edea3]/30 space-y-2">
+          <div className="p-4 rounded-xl bg-black/60 border border-[#d4b06a]/30 space-y-2">
             <div className="flex items-center justify-between text-xs font-mono-legal">
-              <span className="text-[#4edea3] font-bold flex items-center gap-2">
+              <span className="text-[#d4b06a] font-bold flex items-center gap-2">
                 <Activity className="w-4 h-4 animate-spin" />
                 {scanStage}
               </span>
@@ -246,7 +246,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
             </div>
             <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
               <div 
-                className="h-full bg-gradient-to-r from-[#4edea3] to-[#2dd4bf] transition-all duration-300"
+                className="h-full bg-[#d4b06a] transition-all duration-300"
                 style={{ width: `${scanProgress}%` }}
               />
             </div>
@@ -266,12 +266,12 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
           {/* Document Header */}
           <div className="p-4 border-b border-white/10 bg-[#0d0f18] flex flex-wrap items-center justify-between gap-3 shrink-0">
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-8 h-8 rounded-lg bg-white/[0.05] border border-white/10 flex items-center justify-center text-[#4edea3] shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-white/[0.05] border border-white/10 flex items-center justify-center text-[#d4b06a] shrink-0">
                 <FileText className="w-4 h-4" />
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono-legal text-[10px] text-[#4edea3] font-bold uppercase">
+                  <span className="font-mono-legal text-[10px] text-[#d4b06a] font-bold uppercase">
                     CONTRACT TEXT
                   </span>
                   <span className="text-xs text-gray-400 font-mono-legal">
@@ -342,7 +342,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
           {/* Sync guidance bar */}
           <div className="px-4 py-2 bg-white/[0.02] border-b border-white/5 flex items-center justify-between text-[11px] font-mono-legal text-gray-400">
             <span className="flex items-center gap-1.5">
-              <Eye className="w-3.5 h-3.5 text-[#4edea3]" />
+              <Eye className="w-3.5 h-3.5 text-[#d4b06a]" />
               Click any highlighted clause to jump directly to its audit card
             </span>
             <span className="text-[10px] text-gray-500 hidden sm:inline">
@@ -417,7 +417,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                     onClick={() => handleParagraphClick(linkedRisk.id)}
                     className={`cursor-pointer rounded-2xl p-4 transition-all duration-300 relative group border ${
                       isCurrentlyFocused
-                        ? 'ring-2 ring-[#4edea3] shadow-[0_0_25px_rgba(78,222,163,0.3)]'
+                        ? 'ring-2 ring-[#d4b06a]'
                         : ''
                     } ${
                       isApplied
@@ -433,7 +433,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                     <div className="flex items-center justify-between gap-2 mb-2">
                       <div className="flex items-center gap-1.5">
                         {isApplied ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-[#4edea3] border border-emerald-500/30">
+                          <span className="inline-flex items-center gap-1 text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-[#d4b06a] border border-emerald-500/30">
                             <CheckCircle2 className="w-3 h-3" />
                             [Protected: AI Hardened] {linkedRisk.clauseNumber}
                           </span>
@@ -462,7 +462,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                           soundFx.playClick();
                           onOpenRiskModal(linkedRisk);
                         }}
-                        className="opacity-80 group-hover:opacity-100 text-[10px] font-mono-legal text-[#4edea3] hover:underline flex items-center gap-1 shrink-0"
+                        className="opacity-80 group-hover:opacity-100 text-[10px] font-mono-legal text-[#d4b06a] hover:underline flex items-center gap-1 shrink-0"
                       >
                         <span>{isApplied ? 'Inspect Diff' : 'Remedy with AI'}</span>
                         <ChevronRight className="w-3 h-3" />
@@ -497,7 +497,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
           {/* Footer of left column */}
           <div className="p-3 bg-[#0d0f18] border-t border-white/10 flex items-center justify-between text-xs font-mono-legal text-gray-400 shrink-0">
             <div className="flex items-center gap-2">
-              <span className="text-[#4edea3] font-bold">LEXGUARD AI AUDIT</span>
+              <span className="text-[#d4b06a] font-bold">LEXGUARD AI AUDIT</span>
               <span>// UCC §§ 2-302, 2-719 & Restatement of Contracts</span>
             </div>
             <div>
@@ -533,7 +533,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                       cy="40"
                       r={circleRadius}
                       fill="transparent"
-                      stroke={dynamicScore >= 80 ? '#4edea3' : dynamicScore >= 60 ? '#f59e0b' : '#f43f5e'}
+                      stroke={dynamicScore >= 80 ? '#d4b06a' : dynamicScore >= 60 ? '#f59e0b' : '#f43f5e'}
                       strokeWidth="6"
                       strokeDasharray={circleCircumference}
                       strokeDashoffset={strokeDashoffset}
@@ -557,7 +557,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                     LEGAL SAFETY SCORE
                   </div>
                   <div className={`font-syne text-sm font-bold ${
-                    dynamicScore >= 80 ? 'text-[#4edea3]' : dynamicScore >= 60 ? 'text-[#f59e0b]' : 'text-[#f43f5e]'
+                    dynamicScore >= 80 ? 'text-[#d4b06a]' : dynamicScore >= 60 ? 'text-[#f59e0b]' : 'text-[#f43f5e]'
                   }`}>
                     {dynamicScore >= 85 ? 'Strong Parity Protection' : dynamicScore >= 65 ? 'Moderate Exposure' : 'Severe Legal Risk'}
                   </div>
@@ -575,7 +575,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                 className={`px-3 py-2 rounded-xl text-xs font-mono-legal font-bold transition-all flex items-center gap-1.5 ${
                   resolvedCount === audit.risks.length
                     ? 'bg-white/[0.04] text-gray-500 cursor-not-allowed border border-white/5'
-                    : 'bg-[#4edea3] hover:bg-[#34d399] text-black shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:scale-[1.02] active:scale-[0.98]'
+                    : 'bg-[#d4b06a] hover:bg-[#c39d55] text-black hover:scale-[1.02] active:scale-[0.98]'
                 }`}
               >
                 <CheckCheck className="w-3.5 h-3.5" />
@@ -612,11 +612,11 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                 </div>
               </div>
 
-              <div className="p-2.5 rounded-xl bg-[#4edea3]/10 border border-[#4edea3]/30 text-center">
-                <div className="text-[10px] font-mono-legal text-[#4edea3] font-bold uppercase truncate">
+              <div className="p-2.5 rounded-xl bg-[#d4b06a]/10 border border-[#d4b06a]/30 text-center">
+                <div className="text-[10px] font-mono-legal text-[#d4b06a] font-bold uppercase truncate">
                   Protected
                 </div>
-                <div className="font-syne text-lg font-bold text-[#4edea3] mt-0.5">
+                <div className="font-syne text-lg font-bold text-[#d4b06a] mt-0.5">
                   {resolvedCount}/{audit.risks.length}
                 </div>
               </div>
@@ -673,11 +673,11 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                 onClick={() => setFilter('RESOLVED')}
                 className={`px-2.5 py-1 rounded-lg text-xs font-mono-legal font-medium transition-colors flex items-center gap-1 ${
                   filter === 'RESOLVED'
-                    ? 'bg-[#4edea3] text-black font-bold'
+                    ? 'bg-[#d4b06a] text-black font-bold'
                     : 'text-gray-400 bg-white/[0.04] hover:text-white'
                 }`}
               >
-                <CheckCircle2 className="w-3 h-3 text-[#4edea3]" />
+                <CheckCircle2 className="w-3 h-3 text-[#d4b06a]" />
                 Protected ({resolvedCount})
               </button>
             </div>
@@ -687,7 +687,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
           <div ref={riskListRef} className="space-y-3.5 h-[530px] overflow-y-auto pr-1">
             {filteredRisks.length === 0 ? (
               <div className="p-8 rounded-2xl bg-[#0c0e16] border border-white/10 text-center space-y-2">
-                <ShieldCheck className="w-10 h-10 text-[#4edea3] mx-auto opacity-70" />
+                <ShieldCheck className="w-10 h-10 text-[#d4b06a] mx-auto opacity-70" />
                 <h4 className="font-syne text-sm font-bold text-white">
                   No risks in selected filter
                 </h4>

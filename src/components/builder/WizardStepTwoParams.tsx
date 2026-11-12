@@ -53,7 +53,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
       {/* Header bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-2xl bg-black/40 border border-white/10">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#4edea3] uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#d4b06a] uppercase tracking-wider mb-1">
             <Sparkles className="w-3.5 h-3.5" />
             <span>STEP 2 OF 4: CONTRACT PARAMETERIZATION</span>
           </div>
@@ -63,7 +63,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
             {docType === 'equipment_supply' && 'Equipment Supply & Hardware Parameters'}
           </h2>
           <p className="text-xs text-gray-400 font-sans-ui mt-1">
-            Configure key commercial variables. The AI engine automatically balances terms and removes unconscionable clauses.
+            Configure key commercial variables. LexGuard fills in balanced terms and leaves out one-sided clauses.
           </p>
         </div>
 
@@ -101,14 +101,14 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
           {/* Section 1: Parties */}
           <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-4">
             <div className="flex items-center gap-2 pb-3 border-b border-white/10 text-xs font-mono-legal font-bold text-white uppercase tracking-wider">
-              <Building2 className="w-4 h-4 text-[#4edea3]" />
+              <Building2 className="w-4 h-4 text-[#d4b06a]" />
               <span>1. PARTIES & CORPORATE REQUISITES</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Customer */}
               <div className="space-y-3 p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="text-xs font-mono-legal font-semibold text-[#4edea3] block">
+                <span className="text-xs font-mono-legal font-semibold text-[#d4b06a] block">
                   CLIENT (CUSTOMER)
                 </span>
                 <div>
@@ -120,7 +120,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={softwareParams.customerName}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, customerName: e.target.value }))}
                     placeholder="TechnoProm Engineering Inc."
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
 
@@ -134,7 +134,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                       value={softwareParams.customerInn}
                       onChange={(e) => setSoftwareParams(p => ({ ...p, customerInn: e.target.value }))}
                       placeholder="EIN: 12-8492014"
-                      className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                      className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                     />
                   </div>
                   <div>
@@ -146,7 +146,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                       value={softwareParams.city}
                       onChange={(e) => setSoftwareParams(p => ({ ...p, city: e.target.value }))}
                       placeholder="New York, NY"
-                      className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                      className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                     />
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={softwareParams.customerSigner}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, customerSigner: e.target.value }))}
                     placeholder="Alexander Sokolov, Chief Executive Officer"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
               </div>
@@ -179,7 +179,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={softwareParams.contractorName}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, contractorName: e.target.value }))}
                     placeholder="Digital Systems & Cloud Labs LLC"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
 
@@ -192,7 +192,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={softwareParams.contractorInn}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, contractorInn: e.target.value }))}
                     placeholder="EIN: 94-7182930"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                   />
                 </div>
 
@@ -205,7 +205,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={softwareParams.contractorSigner}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, contractorSigner: e.target.value }))}
                     placeholder="Marcus Voronov, Managing Director"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
               </div>
@@ -215,7 +215,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
           {/* Section 2: Subject & Timing */}
           <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-4">
             <div className="flex items-center gap-2 pb-3 border-b border-white/10 text-xs font-mono-legal font-bold text-white uppercase tracking-wider">
-              <FileText className="w-4 h-4 text-[#4edea3]" />
+              <FileText className="w-4 h-4 text-[#d4b06a]" />
               <span>2. STATEMENT OF WORK & TIMELINE</span>
             </div>
 
@@ -229,7 +229,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   value={softwareParams.projectName}
                   onChange={(e) => setSoftwareParams(p => ({ ...p, projectName: e.target.value }))}
                   placeholder="Enterprise Logistics Intelligence Platform with AI Copilot & API Gateway"
-                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                 />
               </div>
 
@@ -243,7 +243,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={softwareParams.durationDays}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, durationDays: e.target.value }))}
                     placeholder="60"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                   />
                 </div>
 
@@ -256,7 +256,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={softwareParams.acceptanceDays}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, acceptanceDays: e.target.value }))}
                     placeholder="5"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                   />
                   <span className="text-[10px] text-gray-500 font-sans-ui mt-0.5 block">
                     Automatic acceptance upon silence
@@ -270,7 +270,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   <select
                     value={softwareParams.warrantyMonths}
                     onChange={(e) => setSoftwareParams(p => ({ ...p, warrantyMonths: e.target.value }))}
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   >
                     <option value="3">3 Months</option>
                     <option value="6">6 Months (Recommended)</option>
@@ -284,7 +284,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
           {/* Section 3: Money & Intellectual Property */}
           <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-4">
             <div className="flex items-center gap-2 pb-3 border-b border-white/10 text-xs font-mono-legal font-bold text-white uppercase tracking-wider">
-              <Coins className="w-4 h-4 text-[#4edea3]" />
+              <Coins className="w-4 h-4 text-[#d4b06a]" />
               <span>3. COMPENSATION & INTELLECTUAL PROPERTY</span>
             </div>
 
@@ -298,7 +298,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   value={softwareParams.totalAmount}
                   onChange={(e) => setSoftwareParams(p => ({ ...p, totalAmount: e.target.value }))}
                   placeholder="$145,000"
-                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                 />
               </div>
 
@@ -309,7 +309,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                 <select
                   value={softwareParams.taxMode}
                   onChange={(e) => setSoftwareParams(p => ({ ...p, taxMode: e.target.value as any }))}
-                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                 >
                   <option value="no_vat">Net of Taxes / Tax-Exempt</option>
                   <option value="vat20">Inclusive of Sales Tax / VAT</option>
@@ -323,7 +323,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                 <select
                   value={softwareParams.paymentTerms}
                   onChange={(e) => setSoftwareParams(p => ({ ...p, paymentTerms: e.target.value as any }))}
-                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                 >
                   <option value="advance30_post70">30% Advance + 70% Upon Acceptance</option>
                   <option value="post100">100% Net Upon Delivery</option>
@@ -342,12 +342,12 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   onClick={() => setSoftwareParams(p => ({ ...p, ipTransferTiming: 'on_100_percent_payment' }))}
                   className={`p-3.5 rounded-xl border cursor-pointer transition-all ${
                     softwareParams.ipTransferTiming === 'on_100_percent_payment'
-                      ? 'bg-[#4edea3]/10 border-[#4edea3] text-white'
+                      ? 'bg-[#d4b06a]/10 border-[#d4b06a] text-white'
                       : 'bg-white/[0.02] border-white/10 text-gray-400 hover:text-white'
                   }`}
                 >
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded bg-[#4edea3]/20 text-[#4edea3]">
+                    <span className="text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded bg-[#d4b06a]/20 text-[#d4b06a]">
                       AI RECOMMENDATION
                     </span>
                     <span className="text-xs font-bold font-syne">Strictly upon 100% Full Payment</span>
@@ -361,7 +361,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   onClick={() => setSoftwareParams(p => ({ ...p, ipTransferTiming: 'on_milestone_acts' }))}
                   className={`p-3.5 rounded-xl border cursor-pointer transition-all ${
                     softwareParams.ipTransferTiming === 'on_milestone_acts'
-                      ? 'bg-[#4edea3]/10 border-[#4edea3] text-white'
+                      ? 'bg-[#d4b06a]/10 border-[#d4b06a] text-white'
                       : 'bg-white/[0.02] border-white/10 text-gray-400 hover:text-white'
                   }`}
                 >
@@ -378,10 +378,10 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
           <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <span className="text-xs font-mono-legal font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <Scale className="w-4 h-4 text-[#4edea3]" />
+                <Scale className="w-4 h-4 text-[#d4b06a]" />
                 <span>4. SYMMETRICAL SANCTIONS & LIABILITY CAP</span>
               </span>
-              <span className="text-[10px] font-mono-legal text-[#4edea3] px-2 py-0.5 rounded bg-[#4edea3]/10 border border-[#4edea3]/30">
+              <span className="text-[10px] font-mono-legal text-[#d4b06a] px-2 py-0.5 rounded bg-[#d4b06a]/10 border border-[#d4b06a]/30">
                 RECIPROCAL PARITY
               </span>
             </div>
@@ -396,7 +396,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   value={softwareParams.penaltyRateDaily}
                   onChange={(e) => setSoftwareParams(p => ({ ...p, penaltyRateDaily: e.target.value }))}
                   placeholder="0.05"
-                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                 />
                 <span className="text-[10px] text-gray-500 font-sans-ui mt-0.5 block">
                   Applies reciprocally to both parties
@@ -412,7 +412,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   value={softwareParams.penaltyCapPercent}
                   onChange={(e) => setSoftwareParams(p => ({ ...p, penaltyCapPercent: e.target.value }))}
                   placeholder="5"
-                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                 />
                 <span className="text-[10px] text-gray-500 font-sans-ui mt-0.5 block">
                   Caps total potential damages exposure
@@ -428,7 +428,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                   value={softwareParams.jurisdiction}
                   onChange={(e) => setSoftwareParams(p => ({ ...p, jurisdiction: e.target.value }))}
                   placeholder="State of Delaware (New Castle County Courts)"
-                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                  className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                 />
               </div>
             </div>
@@ -505,7 +505,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
               </div>
 
               <div className="space-y-3 p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="text-xs font-mono-legal font-semibold text-[#4edea3] block">
+                <span className="text-xs font-mono-legal font-semibold text-[#d4b06a] block">
                   EMPLOYEE
                 </span>
                 <div>
@@ -517,7 +517,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={employmentParams.employeeFullName}
                     onChange={(e) => setEmploymentParams(p => ({ ...p, employeeFullName: e.target.value }))}
                     placeholder="Alex K. Smith"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
 
@@ -530,7 +530,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={employmentParams.employeeInn}
                     onChange={(e) => setEmploymentParams(p => ({ ...p, employeeInn: e.target.value }))}
                     placeholder="SSN: XXX-XX-4819"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                   />
                 </div>
 
@@ -543,7 +543,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={employmentParams.employeePassport}
                     onChange={(e) => setEmploymentParams(p => ({ ...p, employeePassport: e.target.value }))}
                     placeholder="US Passport #Z74819201"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
               </div>
@@ -715,7 +715,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
               </div>
 
               <div className="space-y-3 p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="text-xs font-mono-legal font-semibold text-[#4edea3] block">
+                <span className="text-xs font-mono-legal font-semibold text-[#d4b06a] block">
                   SUPPLIER (VENDOR)
                 </span>
                 <div>
@@ -727,7 +727,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={equipmentParams.supplierName}
                     onChange={(e) => setEquipmentParams(p => ({ ...p, supplierName: e.target.value }))}
                     placeholder="ServerTrade Systems Global LLC"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
 
@@ -740,7 +740,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={equipmentParams.supplierInn}
                     onChange={(e) => setEquipmentParams(p => ({ ...p, supplierInn: e.target.value }))}
                     placeholder="EIN: 47-1928341"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3] font-mono-legal"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a] font-mono-legal"
                   />
                 </div>
 
@@ -753,7 +753,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                     value={equipmentParams.supplierSigner}
                     onChange={(e) => setEquipmentParams(p => ({ ...p, supplierSigner: e.target.value }))}
                     placeholder="Kevin A. White, Commercial Director"
-                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#4edea3]"
+                    className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#d4b06a]"
                   />
                 </div>
               </div>
@@ -840,7 +840,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
                 <label className="text-[11px] font-mono-legal text-gray-400 uppercase block mb-1">
                   Risk of Loss Transfer:
                 </label>
-                <div className="p-2 rounded-xl bg-[#4edea3]/10 border border-[#4edea3]/30 text-[11px] text-[#4edea3] font-mono-legal">
+                <div className="p-2 rounded-xl bg-[#d4b06a]/10 border border-[#d4b06a]/30 text-[11px] text-[#d4b06a] font-mono-legal">
                   Upon Bill of Lading Receipt (UCC § 2-509)
                 </div>
               </div>
@@ -884,7 +884,7 @@ export const WizardStepTwoParams: React.FC<WizardStepTwoParamsProps> = ({
             soundFx.playScanPing();
             onGenerate();
           }}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] transition-all shadow-[0_0_25px_rgba(78,222,163,0.3)]"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all"
         >
           <Sparkles className="w-4 h-4 text-black" />
           <span>Launch AI Document Synthesis</span>

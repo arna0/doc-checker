@@ -67,13 +67,13 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
         {/* Top Breadcrumb & Switcher */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-[#4edea3]" />
-            <span className="font-mono-legal text-xs tracking-widest text-[#4edea3] uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#d4b06a]" />
+            <span className="font-mono-legal text-xs tracking-widest text-[#d4b06a] uppercase">
               01 // PROLOGUE
             </span>
             <span className="text-gray-600 font-mono-legal">•</span>
             <span className="font-mono-legal text-xs text-gray-400 tracking-wider uppercase">
-              LEXGUARD LEGAL INTELLIGENCE
+              LEXGUARD · CONTRACT REVIEW
             </span>
           </div>
 
@@ -92,12 +92,12 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
         {/* Hero Editorial Block */}
         <div className="space-y-6 max-w-4xl">
           <div className="space-y-2">
-            <div className="font-mono-legal text-xs text-[#4edea3] tracking-widest uppercase font-semibold">
+            <div className="font-mono-legal text-xs text-[#d4b06a] tracking-widest uppercase font-semibold">
               EXPOSURE ANALYSIS & CLAUSE PARITY
             </div>
             <h1 className="font-syne text-4xl sm:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight">
               Anatomy of Contractual <br />
-              <span className="text-[#4edea3] font-serif-legal italic font-normal tracking-normal lowercase text-4xl sm:text-6xl">
+              <span className="text-[#d4b06a] font-serif-legal italic font-normal tracking-normal lowercase text-4xl sm:text-6xl">
                 liabilities and risks
               </span>
             </h1>
@@ -115,7 +115,7 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
             <button
               type="button"
               onClick={scrollToScanner}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] transition-all shadow-[0_0_20px_rgba(78,222,163,0.3)]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all"
             >
               <span>AUDIT CONTRACT NOW</span>
               <ArrowDown className="w-4 h-4" />
@@ -127,7 +127,7 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono-legal font-semibold text-gray-300 bg-white/[0.04] hover:bg-white/[0.1] hover:text-white border border-white/10 transition-all"
             >
               <span>EXPLORE RISK ANATOMY</span>
-              <ArrowUpRight className="w-4 h-4 text-[#4edea3]" />
+              <ArrowUpRight className="w-4 h-4 text-[#d4b06a]" />
             </button>
           </div>
         </div>
@@ -146,7 +146,7 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
 
           <div className="p-4 rounded-xl bg-black/40 border border-white/10">
             <div className="text-gray-500 uppercase">SCAN LATENCY</div>
-            <div className="text-[#4edea3] font-semibold mt-1">0.14 sec / agreement</div>
+            <div className="text-[#d4b06a] font-semibold mt-1">0.14 sec / agreement</div>
           </div>
 
           <div className="p-4 rounded-xl bg-black/40 border border-white/10">
@@ -173,8 +173,8 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
       >
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-5 border-b border-white/10">
           <div>
-            <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#4edea3] uppercase mb-1">
-              <span className="w-2 h-2 rounded-full bg-[#4edea3]" />
+            <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#d4b06a] uppercase mb-1">
+              <span className="w-2 h-2 rounded-full bg-[#d4b06a]" />
               <span>04 // LIVE AUDIT SUITE</span>
               <span className="text-gray-500">•</span>
               <span className="text-gray-400">REAL-TIME RISK DECONSTRUCTION</span>
@@ -190,7 +190,7 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
             onClick={onExportReport}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-gray-300 bg-white/[0.05] hover:bg-white/[0.1] hover:text-white border border-white/15 transition-all"
           >
-            <Download className="w-4 h-4 text-[#4edea3]" />
+            <Download className="w-4 h-4 text-[#d4b06a]" />
             <span>Download Redline Schedule</span>
           </button>
         </div>
@@ -217,8 +217,8 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
       >
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-5 border-b border-white/10">
           <div>
-            <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#4edea3] uppercase mb-1">
-              <span className="w-2 h-2 rounded-full bg-[#4edea3]" />
+            <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#d4b06a] uppercase mb-1">
+              <span className="w-2 h-2 rounded-full bg-[#d4b06a]" />
               <span>05 // BENCHMARK TEMPLATES</span>
               <span className="text-gray-500">•</span>
               <span className="text-gray-400">GOLD-STANDARD CONTRACTS</span>
@@ -232,7 +232,7 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
           <button
             type="button"
             onClick={onOpenBuilder}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all"
           >
             <span>Open Document Builder</span>
             <ArrowUpRight className="w-4 h-4 text-black" />
@@ -253,8 +253,8 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
               <span className="font-syne text-xl font-extrabold text-white tracking-tight">
                 LEXGUARD
               </span>
-              <span className="font-mono-legal text-[10px] text-[#4edea3] px-2 py-0.5 rounded bg-[#4edea3]/10 border border-[#4edea3]/30">
-                AI 4.2 CORE
+              <span className="font-mono-legal text-[10px] text-[#d4b06a] px-2 py-0.5 rounded bg-[#d4b06a]/10 border border-[#d4b06a]/30">
+                BETA
               </span>
             </div>
 
@@ -268,11 +268,11 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
               NAVIGATION
             </div>
             <ul className="text-xs font-mono-legal text-gray-500 space-y-1.5">
-              <li><a href="#prologue-chapter" className="hover:text-[#4edea3] transition-colors">01 // Prologue</a></li>
-              <li><a href="#scrubber-chapter" className="hover:text-[#4edea3] transition-colors">02 // Audit Pipeline</a></li>
-              <li><a href="#anatomy-chapter" className="hover:text-[#4edea3] transition-colors">03 // Risk Anatomy</a></li>
-              <li><a href="#scanner-chapter" className="hover:text-[#4edea3] transition-colors">04 // Contract Audit</a></li>
-              <li><a href="#canon-chapter" className="hover:text-[#4edea3] transition-colors">05 // Templates</a></li>
+              <li><a href="#prologue-chapter" className="hover:text-[#d4b06a] transition-colors">01 // Prologue</a></li>
+              <li><a href="#scrubber-chapter" className="hover:text-[#d4b06a] transition-colors">02 // Audit Pipeline</a></li>
+              <li><a href="#anatomy-chapter" className="hover:text-[#d4b06a] transition-colors">03 // Risk Anatomy</a></li>
+              <li><a href="#scanner-chapter" className="hover:text-[#d4b06a] transition-colors">04 // Contract Audit</a></li>
+              <li><a href="#canon-chapter" className="hover:text-[#d4b06a] transition-colors">05 // Templates</a></li>
             </ul>
           </div>
 
@@ -287,11 +287,11 @@ export const ImmersiveLandingPage: React.FC<ImmersiveLandingPageProps> = ({
         </div>
 
         <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono-legal text-gray-500">
-          <div>© 2026 LexGuard Legal Intelligence. All rights reserved.</div>
+          <div>LexGuard is a student project by Arnur. It is not legal advice.</div>
           <div className="flex items-center gap-4">
             <span>UCC COMPLIANT</span>
             <span>•</span>
-            <span className="text-[#4edea3]">ARBITRATION PARITY: 99.4%</span>
+            <span className="text-[#d4b06a]">ARBITRATION PARITY: 99.4%</span>
           </div>
         </div>
       </footer>

@@ -74,13 +74,13 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
       {/* Top Banner & Quick Actions */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-6 rounded-2xl bg-black/40 border border-white/10">
         <div className="space-y-1">
-          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#4edea3] uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#d4b06a] uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>STEP 4 OF 4: SYNTHESIZED DOCUMENT READY</span>
           </div>
           <h2 className="font-syne text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-3">
             <span>{document.title}</span>
-            <span className="text-[11px] font-mono-legal text-[#4edea3] px-2.5 py-0.5 rounded-full bg-[#4edea3]/10 border border-[#4edea3]/30 font-semibold">
+            <span className="text-[11px] font-mono-legal text-[#d4b06a] px-2.5 py-0.5 rounded-full bg-[#d4b06a]/10 border border-[#d4b06a]/30 font-semibold">
               LEGAL PARITY SCORE: 98/100
             </span>
           </h2>
@@ -98,8 +98,8 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
           >
             {copied ? (
               <>
-                <Check className="w-3.5 h-3.5 text-[#4edea3]" />
-                <span className="text-[#4edea3] font-bold">Copied!</span>
+                <Check className="w-3.5 h-3.5 text-[#d4b06a]" />
+                <span className="text-[#d4b06a] font-bold">Copied!</span>
               </>
             ) : (
               <>
@@ -114,14 +114,14 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
             onClick={handleDownloadDocx}
             className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono-legal font-semibold text-white bg-white/[0.08] hover:bg-white/[0.14] border border-white/15 transition-all shadow-sm"
           >
-            <Download className="w-3.5 h-3.5 text-[#4edea3]" />
+            <Download className="w-3.5 h-3.5 text-[#d4b06a]" />
             <span>Export as .docx</span>
           </button>
 
           <button
             type="button"
             onClick={handleScanAudit}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] transition-all shadow-[0_0_20px_rgba(78,222,163,0.3)]"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all"
           >
             <ShieldCheck className="w-4 h-4 text-black" />
             <span>Send to Deep Audit</span>
@@ -134,14 +134,14 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
         {document.protectiveHighlights.map((item, idx) => (
           <div 
             key={idx}
-            className="p-4 rounded-xl bg-black/30 border border-white/10 flex flex-col justify-between space-y-2 hover:border-[#4edea3]/30 transition-all"
+            className="p-4 rounded-xl bg-black/30 border border-white/10 flex flex-col justify-between space-y-2 hover:border-[#d4b06a]/30 transition-all"
           >
             <div className="space-y-1">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono-legal text-[#4edea3] font-bold px-2 py-0.5 rounded bg-[#4edea3]/10 border border-[#4edea3]/20">
+                <span className="text-[10px] font-mono-legal text-[#d4b06a] font-bold px-2 py-0.5 rounded bg-[#d4b06a]/10 border border-[#d4b06a]/20">
                   {item.badge}
                 </span>
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#4edea3]" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#d4b06a]" />
               </div>
               <h4 className="text-xs font-syne font-bold text-white">
                 {item.title}
@@ -168,7 +168,7 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
               }}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono-legal transition-all ${
                 viewMode === 'structured'
-                  ? 'bg-[#4edea3] text-black font-bold'
+                  ? 'bg-[#d4b06a] text-black font-bold'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -184,7 +184,7 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
               }}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono-legal transition-all ${
                 viewMode === 'editor'
-                  ? 'bg-[#4edea3] text-black font-bold'
+                  ? 'bg-[#d4b06a] text-black font-bold'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -200,7 +200,7 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
               }}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono-legal transition-all ${
                 viewMode === 'print'
-                  ? 'bg-[#4edea3] text-black font-bold'
+                  ? 'bg-[#d4b06a] text-black font-bold'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -232,7 +232,7 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
           <div className="space-y-4">
             <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-gray-400 font-sans-ui flex items-center justify-between">
               <span>Agreement layout parsed into modular sections with protective tags.</span>
-              <span className="text-[10px] font-mono-legal text-[#4edea3]">Total Sections: {document.sections.length}</span>
+              <span className="text-[10px] font-mono-legal text-[#d4b06a]">Total Sections: {document.sections.length}</span>
             </div>
 
             <div className="space-y-3">
@@ -243,7 +243,7 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
                 >
                   <div className="flex items-center justify-between">
                     <h3 className="font-syne text-sm font-bold text-white flex items-center gap-2">
-                      <span className="font-mono-legal text-xs text-[#4edea3]">§ {sec.number}</span>
+                      <span className="font-mono-legal text-xs text-[#d4b06a]">§ {sec.number}</span>
                       <span>{sec.title}</span>
                     </h3>
                     <span className="text-[10px] font-mono-legal px-2 py-0.5 rounded bg-white/[0.05] border border-white/10 text-gray-400">
@@ -275,7 +275,7 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
               rows={22}
               value={editedText}
               onChange={(e) => handleTextChange(e.target.value)}
-              className="w-full p-4 rounded-xl bg-black/60 border border-white/10 text-xs font-mono-legal text-gray-200 leading-relaxed focus:outline-none focus:border-[#4edea3] focus:ring-1 focus:ring-[#4edea3]/40 selection:bg-[#4edea3]/20"
+              className="w-full p-4 rounded-xl bg-black/60 border border-white/10 text-xs font-mono-legal text-gray-200 leading-relaxed focus:outline-none focus:border-[#d4b06a] focus:ring-1 focus:ring-[#d4b06a]/40 selection:bg-[#d4b06a]/20"
               spellCheck={false}
             />
           </div>
@@ -285,14 +285,14 @@ export const WizardStepFourDocument: React.FC<WizardStepFourDocumentProps> = ({
         {viewMode === 'print' && (
           <div className="p-8 sm:p-12 rounded-xl bg-zinc-950 border border-white/20 text-gray-200 shadow-2xl font-serif-legal space-y-6 max-w-4xl mx-auto">
             <div className="text-center space-y-2 pb-6 border-b border-white/10">
-              <div className="text-xs uppercase tracking-widest text-[#4edea3] font-mono-legal">
+              <div className="text-xs uppercase tracking-widest text-[#d4b06a] font-mono-legal">
                 EXECUTABLE LEGAL INSTRUMENT
               </div>
               <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white font-syne">
                 {document.title}
               </h2>
               <div className="text-xs text-gray-400 font-mono-legal">
-                Harmonized and verified by LegalTech AI Engine
+                Generated by LexGuard. Have a lawyer review it before signing.
               </div>
             </div>
 

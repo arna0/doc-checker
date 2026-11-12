@@ -205,7 +205,7 @@ export default function App() {
   const activeRisksCount = currentAudit.risks.filter(r => r.status === 'open').length;
 
   return (
-    <div className="min-h-screen bg-[#090a0f] text-[#f3f4f6] font-sans-ui selection:bg-[#4edea3]/20 selection:text-[#4edea3] relative flex flex-col">
+    <div className="min-h-screen bg-[#090a0f] text-[#f3f4f6] font-sans-ui selection:bg-[#d4b06a]/20 selection:text-[#d4b06a] relative flex flex-col">
       {/* 1. Subtle Atmospheric Background Canvas */}
       <GretaAtmosphere />
 
@@ -308,9 +308,9 @@ export default function App() {
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             id="toast-notification"
-            className="fixed bottom-8 right-8 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-[#0e121a]/95 backdrop-blur-xl border border-[#4edea3]/40 text-white shadow-[0_10px_40px_rgba(0,0,0,0.8),0_0_20px_rgba(78,222,163,0.2)] font-mono-legal text-xs font-semibold"
+            className="fixed bottom-8 right-8 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-[#0e121a]/95 backdrop-blur-xl border border-[#d4b06a]/40 text-white shadow-[0_10px_40px_rgba(0,0,0,0.8),0_0_20px_rgba(212,176,106,0.2)] font-mono-legal text-xs font-semibold"
           >
-            <div className="w-6 h-6 rounded-lg bg-[#4edea3]/20 border border-[#4edea3]/50 flex items-center justify-center shrink-0 text-[#4edea3]">
+            <div className="w-6 h-6 rounded-lg bg-[#d4b06a]/20 border border-[#d4b06a]/50 flex items-center justify-center shrink-0 text-[#d4b06a]">
               <Sparkles className="w-3.5 h-3.5 animate-pulse" />
             </div>
             <span>{toastMessage}</span>

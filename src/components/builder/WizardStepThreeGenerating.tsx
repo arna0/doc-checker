@@ -98,21 +98,21 @@ export const WizardStepThreeGenerating: React.FC<WizardStepThreeGeneratingProps>
       <div className="flex flex-col items-center justify-center text-center space-y-4">
         <div className="relative">
           {/* Animated Glow Ring */}
-          <div className="w-24 h-24 rounded-3xl bg-[#4edea3]/10 border border-[#4edea3]/40 flex items-center justify-center relative shadow-[0_0_50px_rgba(78,222,163,0.3)] animate-pulse">
-            <Cpu className="w-10 h-10 text-[#4edea3]" />
+          <div className="w-24 h-24 rounded-3xl bg-[#d4b06a]/10 border border-[#d4b06a]/40 flex items-center justify-center relative animate-pulse">
+            <Cpu className="w-10 h-10 text-[#d4b06a]" />
           </div>
 
           <motion.div 
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-            className="absolute -inset-2 rounded-3xl border border-dashed border-[#4edea3]/30 pointer-events-none"
+            className="absolute -inset-2 rounded-3xl border border-dashed border-[#d4b06a]/30 pointer-events-none"
           />
         </div>
 
         <div className="space-y-1.5">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4edea3]/10 border border-[#4edea3]/30 text-[11px] font-mono-legal text-[#4edea3] uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d4b06a]/10 border border-[#d4b06a]/30 text-[11px] font-mono-legal text-[#d4b06a] uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>NEURAL LEGAL SYNTHESIS ENGINE</span>
+            <span>DRAFTING YOUR AGREEMENT</span>
           </div>
           <h2 className="font-syne text-2xl font-bold text-white tracking-tight">
             AI is synthesizing a balanced agreement...
@@ -127,15 +127,15 @@ export const WizardStepThreeGenerating: React.FC<WizardStepThreeGeneratingProps>
       <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-3">
         <div className="flex items-center justify-between text-xs font-mono-legal">
           <span className="text-gray-400 flex items-center gap-2">
-            <SearchCheck className="w-4 h-4 text-[#4edea3]" />
+            <SearchCheck className="w-4 h-4 text-[#d4b06a]" />
             <span>{stages[currentStageIndex]?.badge}</span>
           </span>
-          <span className="text-[#4edea3] font-bold">{Math.min(100, progress)}%</span>
+          <span className="text-[#d4b06a] font-bold">{Math.min(100, progress)}%</span>
         </div>
 
         <div className="w-full h-2 rounded-full bg-white/[0.05] overflow-hidden p-0.5 border border-white/10">
           <motion.div
-            className="h-full bg-gradient-to-r from-[#4edea3] to-[#34d399] rounded-full shadow-[0_0_15px_rgba(78,222,163,0.6)]"
+            className="h-full bg-[#d4b06a] rounded-full"
             style={{ width: `${progress}%` }}
             transition={{ duration: 0.15 }}
           />
@@ -156,7 +156,7 @@ export const WizardStepThreeGenerating: React.FC<WizardStepThreeGeneratingProps>
               transition={{ delay: idx * 0.05 }}
               className={`p-4 rounded-xl border transition-all duration-300 flex items-start justify-between gap-4 ${
                 isCurrent
-                  ? 'bg-[#4edea3]/10 border-[#4edea3]/40 shadow-[0_0_20px_rgba(78,222,163,0.1)]'
+                  ? 'bg-[#d4b06a]/10 border-[#d4b06a]/40'
                   : isDone
                     ? 'bg-black/30 border-white/10 text-gray-300'
                     : 'bg-black/10 border-white/5 opacity-40'
@@ -165,15 +165,15 @@ export const WizardStepThreeGenerating: React.FC<WizardStepThreeGeneratingProps>
               <div className="flex items-start gap-3">
                 <div className={`mt-0.5 w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${
                   isDone 
-                    ? 'bg-[#4edea3] text-black' 
+                    ? 'bg-[#d4b06a] text-black' 
                     : isCurrent 
-                      ? 'border-2 border-[#4edea3] text-[#4edea3] animate-spin' 
+                      ? 'border-2 border-[#d4b06a] text-[#d4b06a] animate-spin' 
                       : 'border border-gray-600 text-gray-600'
                 }`}>
                   {isDone ? (
                     <Check className="w-3 h-3 stroke-[3]" />
                   ) : isCurrent ? (
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#4edea3]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#d4b06a]" />
                   ) : (
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-600" />
                   )}
@@ -191,7 +191,7 @@ export const WizardStepThreeGenerating: React.FC<WizardStepThreeGeneratingProps>
 
               <span className={`text-[10px] font-mono-legal px-2 py-0.5 rounded shrink-0 ${
                 isDone
-                  ? 'bg-[#4edea3]/20 text-[#4edea3] border border-[#4edea3]/40'
+                  ? 'bg-[#d4b06a]/20 text-[#d4b06a] border border-[#d4b06a]/40'
                   : isCurrent
                     ? 'bg-white/10 text-white animate-pulse'
                     : 'text-gray-600'

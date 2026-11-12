@@ -33,7 +33,7 @@ export const GretaAtmosphere: React.FC = () => {
       color: string;
     }> = [];
 
-    const colors = ['#4edea3', '#7ae5b8', '#e2e8f0', '#e2c275', '#f43f5e'];
+    const colors = ['#d4b06a', '#7ae5b8', '#e2e8f0', '#e2c275', '#f43f5e'];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
@@ -69,7 +69,7 @@ export const GretaAtmosphere: React.FC = () => {
         mouseY,
         Math.max(width, height) * 0.4
       );
-      gradient.addColorStop(0, 'rgba(78, 222, 163, 0.035)');
+      gradient.addColorStop(0, 'rgba(212,176,106, 0.035)');
       gradient.addColorStop(0.5, 'rgba(45, 212, 191, 0.01)');
       gradient.addColorStop(1, 'rgba(9, 10, 15, 0)');
       ctx.fillStyle = gradient;
@@ -100,7 +100,7 @@ export const GretaAtmosphere: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = '#4edea3';
+            ctx.strokeStyle = '#d4b06a';
             ctx.globalAlpha = (1 - dist / 110) * 0.05;
             ctx.lineWidth = 0.5;
             ctx.stroke();
@@ -124,7 +124,7 @@ export const GretaAtmosphere: React.FC = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Deep atmospheric aurora glows with muted mint and dark slate */}
-      <div className="absolute -top-[15%] -left-[10%] w-[55vw] h-[55vw] rounded-full bg-gradient-to-br from-[#4edea3]/8 via-[#2dd4bf]/4 to-transparent blur-[140px] pointer-events-none" />
+      <div className="absolute -top-[15%] -left-[10%] w-[55vw] h-[55vw] rounded-full bg-gradient-to-br from-[#d4b06a]/8 via-[#c39d55]/4 to-transparent blur-[140px] pointer-events-none" />
       <div className="absolute top-[35%] -right-[15%] w-[45vw] h-[45vw] rounded-full bg-gradient-to-br from-[#f43f5e]/5 via-[#e2c275]/3 to-transparent blur-[150px] pointer-events-none" />
       <div className="absolute -bottom-[20%] left-[25%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-t from-[#10b981]/5 to-transparent blur-[160px] pointer-events-none" />
       

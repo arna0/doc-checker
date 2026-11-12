@@ -35,7 +35,7 @@ export const AuditArchiveTab: React.FC<AuditArchiveTabProps> = ({
       {/* Header and Search */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 sm:p-8 rounded-2xl bg-black/40 border border-white/10">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#4edea3] uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#d4b06a] uppercase tracking-wider mb-1">
             <FolderArchive className="w-3.5 h-3.5" />
             CONTRACT REPOSITORY
           </div>
@@ -55,7 +55,7 @@ export const AuditArchiveTab: React.FC<AuditArchiveTabProps> = ({
             placeholder="Search by title or counterparty..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-black/60 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#4edea3]"
+            className="w-full bg-black/60 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#d4b06a]"
           />
         </div>
       </div>
@@ -63,8 +63,8 @@ export const AuditArchiveTab: React.FC<AuditArchiveTabProps> = ({
       {/* Grid of Audited Contracts */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredAudits.map((audit) => {
-          const scoreColor = audit.score >= 80 ? 'text-[#4edea3]' : audit.score >= 60 ? 'text-[#f59e0b]' : 'text-[#f43f5e]';
-          const scoreBg = audit.score >= 80 ? 'bg-[#4edea3]/10 border-[#4edea3]/30' : audit.score >= 60 ? 'bg-[#f59e0b]/10 border-[#f59e0b]/30' : 'bg-[#f43f5e]/10 border-[#f43f5e]/30';
+          const scoreColor = audit.score >= 80 ? 'text-[#d4b06a]' : audit.score >= 60 ? 'text-[#f59e0b]' : 'text-[#f43f5e]';
+          const scoreBg = audit.score >= 80 ? 'bg-[#d4b06a]/10 border-[#d4b06a]/30' : audit.score >= 60 ? 'bg-[#f59e0b]/10 border-[#f59e0b]/30' : 'bg-[#f43f5e]/10 border-[#f43f5e]/30';
 
           return (
             <div
@@ -106,7 +106,7 @@ export const AuditArchiveTab: React.FC<AuditArchiveTabProps> = ({
                   }}
                   className="inline-flex items-center gap-1.5 text-xs font-mono-legal text-gray-400 hover:text-white transition-colors"
                 >
-                  <Download className="w-3.5 h-3.5 text-[#4edea3]" />
+                  <Download className="w-3.5 h-3.5 text-[#d4b06a]" />
                   <span>Report</span>
                 </button>
 
@@ -116,7 +116,7 @@ export const AuditArchiveTab: React.FC<AuditArchiveTabProps> = ({
                     soundFx.playClick();
                     onSelectContract(audit);
                   }}
-                  className="inline-flex items-center gap-1 text-xs font-mono-legal font-bold text-[#4edea3] hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-mono-legal font-bold text-[#d4b06a] hover:underline"
                 >
                   <span>Open Audit</span>
                   <ArrowRight className="w-3.5 h-3.5" />

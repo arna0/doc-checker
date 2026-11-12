@@ -139,7 +139,7 @@ export const RiskDetailModal: React.FC<RiskDetailModalProps> = ({
           {isApplied && (
             <div className="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/40 flex items-center justify-between gap-3">
               <div className="flex items-center gap-2.5 text-xs text-emerald-300 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#4edea3] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#d4b06a] shrink-0" />
                 <span>The safe clause has been successfully injected into the contract and logged in the Audit Report.</span>
               </div>
               <button
@@ -154,7 +154,7 @@ export const RiskDetailModal: React.FC<RiskDetailModalProps> = ({
           )}
 
           {/* Human-readable explanation block */}
-          <div className="p-4 rounded-xl bg-gradient-to-r from-rose-950/20 to-amber-950/10 border border-white/10 space-y-1.5">
+          <div className="p-4 rounded-xl bg-rose-950/20 border border-white/10 space-y-1.5">
             <div className="text-[11px] font-mono-legal font-bold text-rose-300 uppercase tracking-wider flex items-center gap-1.5">
               <AlertTriangle className="w-3.5 h-3.5 text-rose-400" />
               Risk Implication for Client:
@@ -168,7 +168,7 @@ export const RiskDetailModal: React.FC<RiskDetailModalProps> = ({
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-mono-legal text-gray-400">
               <span className="flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5 text-[#4edea3]" />
+                <Layers className="w-3.5 h-3.5 text-[#d4b06a]" />
                 COMPARATIVE REDLINE (DIFF):
               </span>
               <span className="text-[11px] text-gray-500">
@@ -202,11 +202,11 @@ export const RiskDetailModal: React.FC<RiskDetailModalProps> = ({
               </div>
 
               {/* Safe AI Clause */}
-              <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/40 flex flex-col justify-between space-y-3 shadow-[0_0_25px_rgba(78,222,163,0.08)]">
+              <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/40 flex flex-col justify-between space-y-3">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-mono-legal font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#4edea3]" />
+                      <ShieldCheck className="w-3.5 h-3.5 text-[#d4b06a]" />
                       Hardened Clause (AI Balanced):
                     </span>
                     <span className="text-[10px] font-mono-legal px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
@@ -231,7 +231,7 @@ export const RiskDetailModal: React.FC<RiskDetailModalProps> = ({
 
           {/* Legal Rationale Details */}
           <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-1.5">
-            <div className="flex items-center gap-1.5 text-[11px] font-mono-legal text-[#4edea3] font-bold uppercase tracking-wider">
+            <div className="flex items-center gap-1.5 text-[11px] font-mono-legal text-[#d4b06a] font-bold uppercase tracking-wider">
               <Scale className="w-3.5 h-3.5" />
               Statutory Basis & Negotiation Position:
             </div>
@@ -250,8 +250,8 @@ export const RiskDetailModal: React.FC<RiskDetailModalProps> = ({
           >
             {copied ? (
               <>
-                <Check className="w-3.5 h-3.5 text-[#4edea3]" />
-                <span className="text-[#4edea3]">Copied!</span>
+                <Check className="w-3.5 h-3.5 text-[#d4b06a]" />
+                <span className="text-[#d4b06a]">Copied!</span>
               </>
             ) : (
               <>
@@ -287,7 +287,7 @@ export const RiskDetailModal: React.FC<RiskDetailModalProps> = ({
                 type="button"
                 id="apply-fix-to-text-btn"
                 onClick={handleApply}
-                className="inline-flex items-center gap-2 px-5 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] shadow-[0_0_25px_rgba(78,222,163,0.35)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-5 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <ShieldCheck className="w-4 h-4 text-black" />
                 <span>Apply Safe Clause to Contract</span>

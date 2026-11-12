@@ -100,8 +100,8 @@ export const RiskAnatomyShowcase: React.FC = () => {
       {/* Chapter Marker */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-5 border-b border-white/10">
         <div>
-          <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#4edea3] uppercase mb-1">
-            <span className="w-2 h-2 rounded-full bg-[#4edea3]" />
+          <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#d4b06a] uppercase mb-1">
+            <span className="w-2 h-2 rounded-full bg-[#d4b06a]" />
             <span>03 // REDLINE WORKSHOP</span>
             <span className="text-gray-500">•</span>
             <span className="text-gray-400">HIGH-EXPOSURE CLAUSE ANATOMY</span>
@@ -126,7 +126,7 @@ export const RiskAnatomyShowcase: React.FC = () => {
                 }}
                 className={`px-3 py-1.5 rounded-xl text-xs font-mono-legal transition-all duration-200 border ${
                   isSelected
-                    ? 'bg-[#4edea3] text-black font-bold border-[#4edea3] shadow-[0_0_15px_rgba(78,222,163,0.3)]'
+                    ? 'bg-[#d4b06a] text-black font-bold border-[#d4b06a]'
                     : 'bg-white/[0.04] text-gray-400 hover:text-white border-white/10 hover:bg-white/[0.08]'
                 }`}
               >
@@ -142,7 +142,7 @@ export const RiskAnatomyShowcase: React.FC = () => {
       <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="font-mono-legal text-[10px] font-bold px-2 py-0.5 rounded bg-white/[0.06] text-[#4edea3] border border-white/10 uppercase">
+            <span className="font-mono-legal text-[10px] font-bold px-2 py-0.5 rounded bg-white/[0.06] text-[#d4b06a] border border-white/10 uppercase">
               {currentCase.category}
             </span>
             <span className="font-mono-legal text-xs text-gray-400">
@@ -202,24 +202,24 @@ export const RiskAnatomyShowcase: React.FC = () => {
         </div>
 
         {/* Right Column: Recommended Safe Clause */}
-        <div className="p-6 rounded-2xl bg-black/40 border border-[#4edea3]/30 flex flex-col justify-between space-y-4 shadow-[0_10px_30px_rgba(78,222,163,0.08)]">
+        <div className="p-6 rounded-2xl bg-black/40 border border-[#d4b06a]/30 flex flex-col justify-between space-y-4 shadow-[0_10px_30px_rgba(212,176,106,0.08)]">
           <div className="space-y-4">
             <div className="flex items-center justify-between text-xs font-mono-legal">
-              <span className="text-[#4edea3] font-bold uppercase tracking-wider flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#4edea3]" />
+              <span className="text-[#d4b06a] font-bold uppercase tracking-wider flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#d4b06a]" />
                 SAFE AI PROPOSED REVISION:
               </span>
-              <span className="text-[10px] text-[#4edea3] font-mono-legal px-2 py-0.5 rounded bg-[#4edea3]/10 border border-[#4edea3]/20">
+              <span className="text-[10px] text-[#d4b06a] font-mono-legal px-2 py-0.5 rounded bg-[#d4b06a]/10 border border-[#d4b06a]/20">
                 MUTUAL PARITY
               </span>
             </div>
 
-            <div className="p-4 rounded-xl bg-black/60 border border-[#4edea3]/30 text-xs font-mono-legal text-white leading-relaxed shadow-inner">
+            <div className="p-4 rounded-xl bg-black/60 border border-[#d4b06a]/30 text-xs font-mono-legal text-white leading-relaxed shadow-inner">
               {currentCase.safeText}
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#4edea3]/5 border border-[#4edea3]/20 space-y-1">
-              <div className="text-[10px] font-mono-legal text-[#4edea3] uppercase tracking-wider font-bold flex items-center gap-1.5">
+            <div className="p-3.5 rounded-xl bg-[#d4b06a]/5 border border-[#d4b06a]/20 space-y-1">
+              <div className="text-[10px] font-mono-legal text-[#d4b06a] uppercase tracking-wider font-bold flex items-center gap-1.5">
                 <Scale className="w-3.5 h-3.5" />
                 <span>Statutory Rationale:</span>
               </div>
@@ -236,7 +236,7 @@ export const RiskAnatomyShowcase: React.FC = () => {
             <button
               type="button"
               onClick={handleCopySafe}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all"
             >
               {copied ? (
                 <>

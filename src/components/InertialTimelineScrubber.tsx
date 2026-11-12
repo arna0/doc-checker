@@ -103,8 +103,8 @@ export const InertialTimelineScrubber: React.FC = () => {
       {/* Chapter Marker */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-5 border-b border-white/10">
         <div>
-          <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#4edea3] uppercase mb-1">
-            <span className="w-2 h-2 rounded-full bg-[#4edea3]" />
+          <div className="flex items-center gap-2 font-mono-legal text-xs tracking-wider text-[#d4b06a] uppercase mb-1">
+            <span className="w-2 h-2 rounded-full bg-[#d4b06a]" />
             <span>02 // CLAUSE AUDIT PIPELINE</span>
             <span className="text-gray-500">•</span>
             <span className="text-gray-400">FIVE STAGES OF NEURAL DECONSTRUCTION</span>
@@ -127,7 +127,7 @@ export const InertialTimelineScrubber: React.FC = () => {
               }}
               className={`w-9 h-9 rounded-xl font-mono-legal text-xs font-bold transition-all border flex items-center justify-center ${
                 idx === activeIndex
-                  ? 'bg-[#4edea3] text-black border-[#4edea3] shadow-[0_0_15px_rgba(78,222,163,0.3)]'
+                  ? 'bg-[#d4b06a] text-black border-[#d4b06a]'
                   : 'bg-white/[0.04] text-gray-400 border-white/10 hover:text-white hover:bg-white/[0.08]'
               }`}
             >
@@ -141,7 +141,7 @@ export const InertialTimelineScrubber: React.FC = () => {
       <div className="p-6 sm:p-8 rounded-2xl bg-black/40 border border-white/10 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <span className="font-syne text-3xl font-extrabold text-[#4edea3]">
+            <span className="font-syne text-3xl font-extrabold text-[#d4b06a]">
               PHASE {activePhase.number}
             </span>
             <span className="font-mono-legal text-[10px] text-gray-400 uppercase tracking-wider px-2 py-0.5 rounded bg-white/[0.04] border border-white/10">
@@ -153,7 +153,7 @@ export const InertialTimelineScrubber: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-xs font-mono-legal text-[#4edea3] font-semibold">
+            <span className="text-xs font-mono-legal text-[#d4b06a] font-semibold">
               Standard: {activePhase.norm}
             </span>
             <div className="flex items-center gap-1.5">
@@ -187,7 +187,7 @@ export const InertialTimelineScrubber: React.FC = () => {
               {activePhase.description}
             </p>
 
-            <blockquote className="p-4 rounded-xl bg-white/[0.02] border-l-2 border-[#4edea3] text-gray-300 font-serif-legal italic text-sm leading-relaxed">
+            <blockquote className="p-4 rounded-xl bg-white/[0.02] border-l-2 border-[#d4b06a] text-gray-300 font-serif-legal italic text-sm leading-relaxed">
               {activePhase.quote}
             </blockquote>
           </div>
@@ -204,7 +204,7 @@ export const InertialTimelineScrubber: React.FC = () => {
 
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex items-center justify-between text-xs font-mono-legal">
               <span className="text-gray-400">PROCESSING VELOCITY:</span>
-              <span className="text-[#4edea3] font-bold">{activePhase.stat}</span>
+              <span className="text-[#d4b06a] font-bold">{activePhase.stat}</span>
             </div>
           </div>
         </div>

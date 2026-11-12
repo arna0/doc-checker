@@ -98,11 +98,11 @@ export const RiskCard: React.FC<RiskCardProps> = ({
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       className={`rounded-2xl transition-all duration-300 relative overflow-hidden backdrop-blur-md ${
         isFocused 
-          ? 'ring-2 ring-[#4edea3] shadow-[0_0_30px_rgba(78,222,163,0.35)]' 
+          ? 'ring-2 ring-[#d4b06a]' 
           : ''
       } ${
         isApplied
-          ? 'bg-emerald-950/15 border border-emerald-500/40 shadow-[0_0_20px_rgba(16,185,129,0.08)]'
+          ? 'bg-emerald-950/15 border border-emerald-500/40'
           : risk.severity === 'CRITICAL'
             ? 'bg-[#0f0b12] border border-rose-500/25 hover:border-rose-500/45'
             : risk.severity === 'MEDIUM'
@@ -121,7 +121,7 @@ export const RiskCard: React.FC<RiskCardProps> = ({
         <div className="flex items-start sm:items-center gap-3 min-w-0">
           <div className="shrink-0 pt-0.5 sm:pt-0">
             {isApplied ? (
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/50 text-[#4edea3] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/50 text-[#d4b06a] flex items-center justify-center">
                 <Check className="w-4 h-4" />
               </div>
             ) : (
@@ -163,7 +163,7 @@ export const RiskCard: React.FC<RiskCardProps> = ({
             type="button"
             onClick={handleScrollClick}
             title="Locate clause in document text"
-            className="p-1.5 text-xs text-gray-400 hover:text-[#4edea3] rounded-lg hover:bg-white/[0.06] flex items-center gap-1 transition-colors"
+            className="p-1.5 text-xs text-gray-400 hover:text-[#d4b06a] rounded-lg hover:bg-white/[0.06] flex items-center gap-1 transition-colors"
           >
             <FileSearch className="w-3.5 h-3.5" />
             <span className="hidden sm:inline font-mono-legal text-[11px]">Locate</span>
@@ -197,7 +197,7 @@ export const RiskCard: React.FC<RiskCardProps> = ({
             soundFx.playClick();
             onOpenModal(risk);
           }}
-          className="inline-flex items-center gap-1.5 text-xs font-mono-legal font-semibold text-[#4edea3] hover:text-[#34d399] transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-mono-legal font-semibold text-[#d4b06a] hover:text-[#c39d55] transition-colors"
         >
           <Sparkles className="w-3.5 h-3.5" />
           <span>Review Diff & Safe AI Clause</span>
@@ -218,7 +218,7 @@ export const RiskCard: React.FC<RiskCardProps> = ({
             <button
               type="button"
               onClick={handleApplyQuick}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] shadow-[0_0_15px_rgba(78,222,163,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-black" />
               <span>Apply to Agreement</span>
@@ -251,7 +251,7 @@ export const RiskCard: React.FC<RiskCardProps> = ({
             <div className="p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-500/30 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-mono-legal font-bold text-emerald-400 flex items-center gap-1.5 uppercase">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#4edea3]" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#d4b06a]" />
                   AI-Hardened Safe Clause:
                 </span>
                 <button
@@ -261,7 +261,7 @@ export const RiskCard: React.FC<RiskCardProps> = ({
                 >
                   {copied ? (
                     <>
-                      <Check className="w-3 h-3 text-[#4edea3]" />
+                      <Check className="w-3 h-3 text-[#d4b06a]" />
                       <span>Copied</span>
                     </>
                   ) : (
@@ -280,7 +280,7 @@ export const RiskCard: React.FC<RiskCardProps> = ({
             {/* Legal grounds */}
             <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5 space-y-1 text-xs text-gray-400">
               <div className="font-mono-legal text-[10px] text-gray-400 flex items-center gap-1 uppercase">
-                <Scale className="w-3 h-3 text-[#4edea3]" />
+                <Scale className="w-3 h-3 text-[#d4b06a]" />
                 Legal Grounding & Parity Argument:
               </div>
               <p className="text-gray-300 leading-relaxed font-sans-ui">

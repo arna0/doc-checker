@@ -31,7 +31,7 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
   const getIcon = (type: BuilderDocType) => {
     switch (type) {
       case 'software_dev':
-        return <Code2 className="w-6 h-6 text-[#4edea3]" />;
+        return <Code2 className="w-6 h-6 text-[#d4b06a]" />;
       case 'employment':
         return <Briefcase className="w-6 h-6 text-[#60a5fa]" />;
       case 'equipment_supply':
@@ -42,11 +42,11 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
   const getAccentColor = (type: BuilderDocType) => {
     switch (type) {
       case 'software_dev':
-        return 'border-[#4edea3]/40 bg-[#4edea3]/5 shadow-[0_0_25px_rgba(78,222,163,0.12)]';
+        return 'border-[#d4b06a]/40 bg-[#d4b06a]/5';
       case 'employment':
-        return 'border-[#60a5fa]/40 bg-[#60a5fa]/5 shadow-[0_0_25px_rgba(96,165,250,0.12)]';
+        return 'border-[#60a5fa]/40 bg-[#60a5fa]/5';
       case 'equipment_supply':
-        return 'border-[#f59e0b]/40 bg-[#f59e0b]/5 shadow-[0_0_25px_rgba(245,158,11,0.12)]';
+        return 'border-[#f59e0b]/40 bg-[#f59e0b]/5';
     }
   };
 
@@ -55,7 +55,7 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
       {/* Intro Box */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-black/40 border border-white/10">
         <div className="space-y-1">
-          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#4edea3] uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-xs font-mono-legal text-[#d4b06a] uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>STEP 1 OF 4: SELECT CONTRACT TEMPLATE</span>
           </div>
@@ -63,12 +63,12 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
             Choose Document Template Type
           </h2>
           <p className="text-xs text-gray-400 font-sans-ui max-w-2xl leading-relaxed">
-            Every template is legally hardened with balanced remedies, reciprocal liability caps, and clear dispute resolution protocols.
+            Each template uses mutual liability caps, fair remedies and a clear way to resolve disputes.
           </p>
         </div>
 
         <div className="flex items-center gap-2 text-xs font-mono-legal px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-gray-300 shrink-0">
-          <Scale className="w-4 h-4 text-[#4edea3]" />
+          <Scale className="w-4 h-4 text-[#d4b06a]" />
           <span>Equitable Terms & Parity</span>
         </div>
       </div>
@@ -104,7 +104,7 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
                 </div>
 
                 <div>
-                  <span className="text-[11px] font-mono-legal text-[#4edea3] font-semibold block mb-1">
+                  <span className="text-[11px] font-mono-legal text-[#d4b06a] font-semibold block mb-1">
                     {doc.codeRef}
                   </span>
                   <h3 className="font-syne text-lg font-bold text-white tracking-tight">
@@ -123,7 +123,7 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
                 <div className="space-y-2 pt-2">
                   {doc.bullets.map((bullet, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-[11px] text-gray-300 font-sans-ui">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#4edea3] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#d4b06a] shrink-0 mt-0.5" />
                       <span>{bullet}</span>
                     </div>
                   ))}
@@ -155,7 +155,7 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
                   }}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono-legal font-bold transition-all ${
                     isSelected
-                      ? 'bg-[#4edea3] text-black shadow-[0_0_15px_rgba(78,222,163,0.3)]'
+                      ? 'bg-[#d4b06a] text-black'
                       : 'bg-white/[0.06] text-white hover:bg-white/[0.12] border border-white/10'
                   }`}
                 >
@@ -176,7 +176,7 @@ export const WizardStepOneType: React.FC<WizardStepOneTypeProps> = ({
             soundFx.playClick();
             onContinue();
           }}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#4edea3] hover:bg-[#34d399] transition-all shadow-[0_0_25px_rgba(78,222,163,0.25)]"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono-legal font-bold text-black bg-[#d4b06a] hover:bg-[#c39d55] transition-all"
         >
           <span>Continue to Contract Parameters</span>
           <ArrowRight className="w-4 h-4 text-black" />

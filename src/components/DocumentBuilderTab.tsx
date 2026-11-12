@@ -140,7 +140,7 @@ export const DocumentBuilderTab: React.FC<DocumentBuilderTabProps> = ({
                   }}
                   className={`flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-mono-legal transition-all shrink-0 ${
                     isCurrent
-                      ? 'bg-[#4edea3]/15 text-[#4edea3] border border-[#4edea3]/40 shadow-[0_0_15px_rgba(78,222,163,0.15)] font-bold'
+                      ? 'bg-[#d4b06a]/15 text-[#d4b06a] border border-[#d4b06a]/40 font-bold'
                       : isDone
                         ? 'text-gray-300 hover:text-white cursor-pointer'
                         : 'text-gray-600 cursor-not-allowed'
@@ -148,9 +148,9 @@ export const DocumentBuilderTab: React.FC<DocumentBuilderTabProps> = ({
                 >
                   <div className={`w-6 h-6 rounded-lg flex items-center justify-center text-[11px] font-bold ${
                     isDone 
-                      ? 'bg-[#4edea3] text-black' 
+                      ? 'bg-[#d4b06a] text-black' 
                       : isCurrent 
-                        ? 'bg-[#4edea3]/20 text-[#4edea3] border border-[#4edea3]/40' 
+                        ? 'bg-[#d4b06a]/20 text-[#d4b06a] border border-[#d4b06a]/40' 
                         : 'bg-white/[0.05] text-gray-500'
                   }`}>
                     {isDone ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : s.num}
@@ -160,7 +160,7 @@ export const DocumentBuilderTab: React.FC<DocumentBuilderTabProps> = ({
 
                 {idx < steps.length - 1 && (
                   <div className={`flex-1 h-[1px] min-w-4 transition-colors ${
-                    currentStep > s.num ? 'bg-[#4edea3]/50' : 'bg-white/10'
+                    currentStep > s.num ? 'bg-[#d4b06a]/50' : 'bg-white/10'
                   }`} />
                 )}
               </React.Fragment>
