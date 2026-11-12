@@ -353,7 +353,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
           {/* Scrollable Document Text */}
           <div 
             ref={textColumnRef}
-            className="flex-1 overflow-y-auto p-5 sm:p-7 space-y-4 font-sans-ui text-gray-300 text-xs sm:text-sm leading-relaxed select-text"
+            className="flex-1 overflow-y-auto bg-[#f7f3ea] text-[#2b2620] px-6 sm:px-12 py-8 sm:py-10 space-y-4 font-serif-doc text-[15px] leading-[1.7] select-text"
           >
             {audit.paragraphs && audit.paragraphs.length > 0 ? (
               audit.paragraphs.map((para) => {
@@ -361,7 +361,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                   return (
                     <div 
                       key={para.id} 
-                      className="pt-3 pb-1 font-syne font-bold text-white text-xs sm:text-sm tracking-wider uppercase border-b border-white/10 text-center"
+                      className="pt-5 pb-1 font-serif-doc font-semibold text-[#1d1a16] text-[13px] tracking-[0.08em] uppercase text-center"
                     >
                       {para.text}
                     </div>
@@ -374,7 +374,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
 
                 if (!linkedRisk) {
                   return (
-                    <p key={para.id} className="text-gray-300 leading-relaxed font-normal">
+                    <p key={para.id} className="text-[#2b2620] leading-relaxed font-normal">
                       {para.text}
                     </p>
                   );
@@ -386,7 +386,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
 
                 if (highlightMode === 'clean') {
                   return (
-                    <p key={para.id} className="text-gray-300 leading-relaxed">
+                    <p key={para.id} className="text-[#2b2620] leading-relaxed">
                       {isApplied ? linkedRisk.proposedClause : para.text}
                     </p>
                   );
@@ -394,7 +394,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
 
                 if (highlightMode === 'critical' && !isCritical && !isApplied) {
                   return (
-                    <p key={para.id} className="text-gray-300 leading-relaxed">
+                    <p key={para.id} className="text-[#2b2620] leading-relaxed">
                       {para.text}
                     </p>
                   );
@@ -402,7 +402,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
 
                 if (highlightMode === 'applied' && !isApplied) {
                   return (
-                    <p key={para.id} className="text-gray-300 leading-relaxed opacity-60">
+                    <p key={para.id} className="text-[#2b2620] leading-relaxed opacity-60">
                       {para.text}
                     </p>
                   );
@@ -415,42 +415,42 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                     key={para.id}
                     id={`para-risk-${linkedRisk.id}`}
                     onClick={() => handleParagraphClick(linkedRisk.id)}
-                    className={`cursor-pointer rounded-2xl p-4 transition-all duration-300 relative group border ${
+                    className={`cursor-pointer rounded-md px-4 py-3 -mx-4 transition-all duration-300 relative group border ${
                       isCurrentlyFocused
                         ? 'ring-2 ring-[#d4b06a]'
                         : ''
                     } ${
                       isApplied
-                        ? 'bg-emerald-950/20 border-emerald-500/30 text-emerald-100 hover:bg-emerald-950/35'
+                        ? 'bg-emerald-50 border-emerald-300 text-emerald-950 hover:bg-emerald-100/70'
                         : isCritical
-                          ? 'bg-rose-950/25 border-rose-500/35 text-rose-100 hover:bg-rose-950/40'
+                          ? 'bg-rose-50 border-rose-300 text-rose-950 hover:bg-rose-100/70'
                           : isMedium
-                            ? 'bg-amber-950/25 border-amber-500/35 text-amber-100 hover:bg-amber-950/40'
-                            : 'bg-emerald-950/20 border-emerald-500/30 text-emerald-200 hover:bg-emerald-950/35'
+                            ? 'bg-amber-50 border-amber-300 text-amber-950 hover:bg-amber-100/70'
+                            : 'bg-sky-50 border-sky-200 text-sky-950 hover:bg-sky-100/70'
                     }`}
                   >
                     {/* Badge over flagged clause */}
                     <div className="flex items-center justify-between gap-2 mb-2">
                       <div className="flex items-center gap-1.5">
                         {isApplied ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-[#d4b06a] border border-emerald-500/30">
+                          <span className="inline-flex items-center gap-1 text-[11px] font-sans-ui font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">
                             <CheckCircle2 className="w-3 h-3" />
-                            [Protected: AI Hardened] {linkedRisk.clauseNumber}
+                            Fixed · {linkedRisk.clauseNumber}
                           </span>
                         ) : isCritical ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded-full bg-rose-500/25 text-rose-200 border border-rose-500/40">
-                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" />
-                            [Critical: {linkedRisk.clauseNumber}] — {linkedRisk.clauseTitle}
+                          <span className="inline-flex items-center gap-1 text-[11px] font-sans-ui font-semibold px-2 py-0.5 rounded bg-rose-100 text-rose-800">
+                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                            Critical · {linkedRisk.clauseNumber} {linkedRisk.clauseTitle}
                           </span>
                         ) : isMedium ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded-full bg-amber-500/25 text-amber-200 border border-amber-500/40">
+                          <span className="inline-flex items-center gap-1 text-[11px] font-sans-ui font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">
                             <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                            [Warning: {linkedRisk.clauseNumber}] — {linkedRisk.clauseTitle}
+                            Warning · {linkedRisk.clauseNumber} {linkedRisk.clauseTitle}
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-mono-legal font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-200 border border-emerald-500/30">
+                          <span className="inline-flex items-center gap-1 text-[11px] font-sans-ui font-semibold px-2 py-0.5 rounded bg-sky-100 text-sky-800">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                            [Advisory: {linkedRisk.clauseNumber}] — {linkedRisk.clauseTitle}
+                            Advisory · {linkedRisk.clauseNumber} {linkedRisk.clauseTitle}
                           </span>
                         )}
                       </div>
@@ -462,25 +462,25 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                           soundFx.playClick();
                           onOpenRiskModal(linkedRisk);
                         }}
-                        className="opacity-80 group-hover:opacity-100 text-[10px] font-mono-legal text-[#d4b06a] hover:underline flex items-center gap-1 shrink-0"
+                        className="opacity-80 group-hover:opacity-100 text-[12px] font-sans-ui font-semibold text-[#7a5a1e] hover:underline flex items-center gap-1 shrink-0"
                       >
-                        <span>{isApplied ? 'Inspect Diff' : 'Remedy with AI'}</span>
+                        <span>{isApplied ? 'See changes' : 'Suggest a fix'}</span>
                         <ChevronRight className="w-3 h-3" />
                       </button>
                     </div>
 
                     {/* Text content: original vs applied safe clause */}
                     {isApplied ? (
-                      <div className="space-y-1.5 font-mono-legal text-xs text-emerald-100">
+                      <div className="space-y-1.5 text-emerald-950">
                         <div className="font-medium leading-relaxed">
                           {linkedRisk.proposedClause}
                         </div>
-                        <div className="text-[10px] text-gray-400 font-sans-ui italic line-through opacity-60">
+                        <div className="text-xs text-stone-500 font-sans-ui line-through">
                           Original: {linkedRisk.originalText}
                         </div>
                       </div>
                     ) : (
-                      <div className="font-mono-legal text-xs leading-relaxed">
+                      <div className="leading-[1.7]">
                         {para.text}
                       </div>
                     )}
@@ -488,7 +488,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                 );
               })
             ) : (
-              <div className="p-4 text-center text-gray-400 font-mono-legal text-xs">
+              <div className="p-4 text-center text-stone-500 font-sans-ui text-sm">
                 Contract document loaded. All clauses cross-referenced with statutory database.
               </div>
             )}
@@ -579,7 +579,7 @@ export const ContractAnalysisTab: React.FC<ContractAnalysisTabProps> = ({
                 }`}
               >
                 <CheckCheck className="w-3.5 h-3.5" />
-                <span>Neutralize All (AI)</span>
+                <span>Fix all risky clauses</span>
               </button>
             </div>
 

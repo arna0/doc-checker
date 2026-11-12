@@ -5,32 +5,38 @@
     scroll-behavior: smooth;
   }
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    background-color: #090a0f;
-    color: #f3f4f6;
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    background-color: #111214;
+    color: #ece9e4;
     overflow-x: hidden;
   }
 }
 
+/* Headings: a book serif instead of a trendy display face */
 .font-syne {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Source Serif 4', Georgia, serif;
+  letter-spacing: -0.01em;
 }
 
 .font-editorial {
-  font-family: 'Syne', sans-serif;
-  letter-spacing: -0.04em;
+  font-family: 'Source Serif 4', Georgia, serif;
+  letter-spacing: -0.02em;
 }
 
-.font-serif-legal {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+.font-serif-legal,
+.font-serif-doc {
+  font-family: 'Source Serif 4', Georgia, serif;
 }
 
 .font-sans-ui {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
 }
 
+/* Interface labels were monospace "terminal" text; now plain sans with tabular numbers */
 .font-mono-legal {
-  font-family: 'JetBrains Mono', Courier, monospace;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
 }
 
 /* Glassmorphism & Aurora Atmosphere inspired by Superhero Cheesecake (The Year of Greta) */
