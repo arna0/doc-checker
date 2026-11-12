@@ -2,7 +2,7 @@
 
 **Upload a contract, see the risks before you sign.**
 
-### ▶ [Live demo](https://arna0.github.io/doc-checker/): opens in the browser, nothing to install
+### ▶ [Live demo](https://arna0.github.io/lexguard/): opens in the browser, nothing to install
 
 Most people sign rental, job or service contracts without a lawyer and miss one-sided clauses: hidden penalties, automatic renewals, unlimited liability. LexGuard reads the contract, highlights risky clauses, explains each one in plain language, and helps you generate a fairer agreement.
 
