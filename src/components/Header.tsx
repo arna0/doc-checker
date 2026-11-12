@@ -179,7 +179,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Download Project ZIP for VS Code */}
         <a
-          href="/lexguard-project.zip"
+          href={`${import.meta.env.BASE_URL}lexguard-project.zip`}
           download="lexguard-project.zip"
           id="header-download-zip-btn"
           onClick={() => {
